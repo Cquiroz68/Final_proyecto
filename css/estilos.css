@@ -271,23 +271,24 @@ main{
         
 }
 
-.box__footer h2{
+.footer h2{
     text-align: center;
     font-size: clamp(0.7em, 3em, 2em);
 }
 
 .box__footer{
-    max-width: min(50%, 1400px);
+    max-width: min(90%, 1400px);
     height: auto;
     margin: auto;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 3%;
     gap: 25px;
     
 }
 
 .box__footer a{
-    text-align: justify;
+    
     text-decoration: none;
     font-size: clamp(0.7em, 3em, 2em);
 }
@@ -401,5 +402,17 @@ main{
     .banner__text{
         width: 100%;
         margin-top: -100px;
+    }
+
+    .box__footer{
+        max-width: min(90%, 1400px);
+        height: auto;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 3%;
+        gap: 25px;
+        
     }
 }
