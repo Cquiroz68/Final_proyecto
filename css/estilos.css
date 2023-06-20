@@ -20,27 +20,45 @@ body{
 }
 
 header{
-    height: 100px;
-    margin-bottom: 5%;
+    max-width: min(100%, 1600px);
+    height: 100vh;
+    margin-bottom: 15%;
+    margin-top: 3%;
+   
 }
 
 .container__header{
     max-width: min(100%, 1600px);
-    height: 100%;
+    height: 100vh;
     margin: auto;
     padding: 40px;
     padding-top: 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 0;
+    left: 0;
+    
 }
 
 .logo img{
-    width: 180px;
+    width: 20%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    
 }
 
  .menu nav ul{
+    position: absolute;
+    top: 10%;
     display: flex;
+   
+    z-index: 2000;
 }
 
 .menu nav ul li{
@@ -66,7 +84,7 @@ nav ul li ul{
     flex-direction: column;
     background: var(--letra);
     position: absolute;
-    top: 60px;
+    top: 30px;
     right: 12%;
     padding: 14px 0px;
     visibility: hidden;
@@ -74,12 +92,13 @@ nav ul li ul{
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5); 
     z-index: 10;
     transition: all 300ms ease;
+    
   }
   
   nav ul li:hover ul{
     visibility: visible;
     opacity: 1;
-    top: 95px;
+    top: 30px;
     /* transition: all 300ms ease; */
   }
   
@@ -152,11 +171,16 @@ main{
 }
 
 .text__information-cover{
+    position: absolute;
+    top: 50%;
+
+    z-index: 3;
     width: 50%;
 }
 
 .text__information-cover h1{
-    font-size: 50px;
+    text-align: center;
+    font-size: clamp(0.8em, 3em, 2.5em);
 }
 
 .text__information-cover p{
@@ -185,12 +209,18 @@ main{
 }
 
 .media__cover{
-    width: 50%;
+    max-width: min(100%, 1600px);
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
 }
 
 .media__cover video{
     width: 100%;
-    margin-top: -40px;
+    
+   
 }
 
 .imagenportada img{
@@ -201,7 +231,8 @@ main{
 /*BANNER*/
 
 .container__banner{
-    margin-top: 80px;
+    margin-top: -20%;
+    border: 2px solid red;
 }
 
 .banner{
@@ -268,7 +299,7 @@ main{
 .footer{
     max-width: min(100%, 1600px);
     height: auto;
-        
+    margin-top: -60%;    
 }
 
 .footer h2{

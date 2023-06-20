@@ -37,12 +37,15 @@ h6 {
 
 #galeria-responsive {
     width: 100%;
+    position: absolute;
+    top: 40%;
+    border: 2px solid red;
 }
 
 #galeria-responsive img {
     width: 100%;
     display: block;
-    border: 1px solid red;
+    
 }
 
 

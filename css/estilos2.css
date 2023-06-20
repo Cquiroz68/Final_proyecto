@@ -1,0 +1,658 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 0.625em;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: 'Roboto Condensed', sans-serif;
+    background: url(../img/port-img-100.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+.proyecto1 {
+    background-image: url(../img/port-img-111.jpg);
+}
+
+.proyecto2 {
+    background-image: url(../img/port-img-110.jpg);
+}
+
+.proyecto3 {
+    background-image: url(../img/port-img-101.jpg)
+}
+
+.proyecto4 {
+    background-image: url(../img/port-img-107.jpg)
+}
+
+.proyecto5 {
+    background-image: url(../img/port-img-106.jpg)
+}
+
+.proyecto6 {
+    background-image: url(../img/port-img-108.jpg)
+}
+
+.proyecto7 {
+    background-image: url(../img/port-img-21.jpg)
+}
+
+.proyecto8 {
+    background-image: url(../img/port-img-19.jpg)
+}
+
+.proyecto9 {
+    background-image: url(../img/port-img-14.jpg)
+}
+
+.proyecto10 {
+    background-image: url(../img/port-img-113.jpg)
+}
+
+.proyecto11 {
+    background-image: url(../img/port-img-100.jpg)
+}
+
+.proyecto12 {
+    background-image: url(../img/port-img-17.jpg)
+}
+
+.proyecto13 {
+    background-image: url(../img/port-img-112.jpg)
+}
+
+.proyecto14 {
+    background-image: url(../img/port-img-115.jpg)
+}
+
+.proyecto15 {
+    background-image: url(../img/port-img-109.jpg)
+}
+
+.proyecto16 {
+    background-image: url(../img/port-img-102.jpg)
+}
+
+
+li {
+    list-style: none;
+}
+
+iframe {
+    border: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+}
+
+/******************NO_JS******************/
+
+.no-js #site-nav .menualto {
+
+    margin: 0px;
+
+}
+
+.no-js #menu ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.no-js #menu li {
+    padding: 10px;
+}
+
+
+.no-js #site-nav span::before {
+    content: "";
+    display: none;
+
+
+}
+
+.no-js #proyectos li {
+    background: rgb(0, 0, 0, 0.3);
+}
+
+
+.no-js #proyectos li dd {
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+@media (min-width:1200px) {
+
+    .no-js #menu {
+
+        font-size: 2.8rem;
+        margin: 0px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap;
+
+    }
+
+
+    .no-js .menualto {
+
+        flex: 0 1 25%;
+
+    }
+
+}
+
+/******************************************/
+
+
+
+
+/******************HEADER*****************/
+
+.js .logo {
+    display: none;
+}
+
+
+#galeria {
+    min-height: 125vh;
+}
+
+#site-header,
+#site-nav {
+
+    background: white;
+
+}
+
+#site-header {
+
+    padding: 10px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #bcbcbc;
+    z-index: 3;
+    position: sticky;
+    top: -80px;
+    left: 0;
+    opacity: 1;
+    transition: 0.2s linear opacity;
+
+
+}
+
+#site-header h1 {
+
+    display: none;
+}
+
+/***********************************************/
+
+/************boton*****************************/
+
+#btn {
+    position: relative;
+    width: 35px;
+    height: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    user-select: none;
+
+}
+
+#btn span {
+
+    background: black;
+    height: 2px;
+    width: 100%;
+    transform-origin: right center;
+
+}
+
+
+#btn span:nth-child(1),
+#btn span:nth-child(3) {
+    transform: scale(0.8);
+}
+
+#btn span:nth-child(2) {
+    transform: scale(1.2);
+}
+
+#btn:hover span {
+    transform: scale(1);
+    transition: 0.2s linear;
+}
+
+/**************BOTON_ACTIVO*********/
+
+
+.btn-click #btn {
+    position: relative;
+    width: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none;
+
+}
+
+.btn-click #btn span:nth-child(1) {
+
+
+    transform: translateY(3px) rotate(-45deg);
+    transform-origin: center center;
+
+}
+
+
+.btn-click #btn span:nth-child(2) {
+
+    display: none;
+}
+
+
+.btn-click #btn span:nth-child(3) {
+
+    transform: rotate(45deg);
+    transform-origin: center center;
+
+
+}
+
+
+/******************SITE-NAV*****************/
+
+
+.js #site-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100vh;
+    width: 100%;
+    opacity: 0;
+    transition: 0.2s linear opacity;
+
+}
+
+
+.btn-click #site-nav {
+
+    opacity: 1;
+    z-index: 2;
+
+}
+
+.js #site-nav li {
+
+    transform: translateX(-70%);
+    opacity: 0;
+    transition: 0.3s;
+}
+
+
+.btn-click #site-nav li {
+    transform: translateX(0%);
+    opacity: 1;
+}
+
+.btn-click #site-nav li:nth-child(1) {
+
+    transition-delay: 0s;
+}
+
+.btn-click #site-nav li:nth-child(2) {
+
+    transition: 0.1s;
+}
+
+.btn-click #site-nav li:nth-child(3) {
+
+    transition-delay: 0.2s;
+}
+
+.btn-click #site-nav li:nth-child(4) {
+
+    transition-delay: 0.3s;
+}
+
+.btn-click #site-nav li:nth-child(5) {
+
+    transition-delay: 0.4s;
+}
+
+
+#site-nav .menualto {
+    text-transform: uppercase;
+    color: black;
+    font-size: 4.0rem;
+    font-weight: 700;
+    cursor: pointer;
+    text-align: center;
+    user-select: none;
+    margin: 20px;
+    position: relative;
+    z-index: 6;
+
+}
+
+
+#site-nav span::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.4);
+
+}
+
+
+#menu ul {
+    margin-top: 20px;
+    display: none;
+}
+
+/*MENU ACTIVE*/
+#menu ul.active {
+    display: block;
+}
+
+#menu a {
+    display: block;
+    padding: 10px 0px;
+    text-decoration: none;
+    color: #3b3b3b;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 300;
+}
+
+/*********************MAIN*****************/
+
+
+#proyectos li {
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    min-height: 80px;
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+}
+
+#proyectos li.fondo {
+    background: rgb(0, 0, 0, 0.4);
+}
+
+#proyectos a {
+
+    text-decoration: none;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 100px;
+    margin-left: 10px;
+    transition: 0.2s linear;
+}
+
+
+#proyectos dt {
+    font-weight: 700;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+}
+
+#proyectos dl {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+#proyectos li dd {
+    transform: translateY(20px);
+    opacity: 0;
+    transition: 0.3s;
+}
+
+#proyectos li.fondo dd {
+    transform: translateY(0px);
+    opacity: 1;
+    
+}
+
+/***************SEGUNDA CONSULTA*************/
+
+@media (min-width:600px) and (max-width:899px) {
+
+
+    #proyectos {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+    }
+
+
+    #proyectos li {
+        flex: 0 1 50%;
+        width: 50%;
+        min-height: 15vh;
+    }
+
+
+    #proyectos a {
+
+        min-height: 12vh;
+
+    }
+
+    #proyectos li:nth-child(odd) {
+        border-right: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+}
+
+/***************TERCERA CONSULTA*************/
+
+
+@media (min-width:900px) {
+
+    .js #site-header {
+        display: none;
+    }
+
+    #site-header
+     {
+        background: transparent;
+    }
+    
+    .js #site-nav{
+        background: white;
+    }
+
+    .js #site-header {
+
+        padding: 10px 40px; 
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: none;
+        z-index: 3;
+        position: fixed;
+        width:100%;
+        top: 0;
+        left: 0;
+        opacity: 1;
+        transition: 0.2s linear opacity;
+        background: transparent;
+    }
+
+    #site-header img {
+        display: none;
+    }
+
+    
+   
+   
+     #site-header:before {
+        content: "";
+        width:100px;
+        height: 43px;
+        background: url(../img/logo-lightr.png)no-repeat center center;
+    
+    }
+    
+    .btn-click #site-header img{
+        position: absolute;
+        display:block;
+        top: 10px;
+        left:40px;
+        
+    }
+    
+    
+    
+    
+    
+    
+    /************boton*****************************/
+
+#btn {
+    position: relative;
+    width: 35px;
+    height: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    user-select: none;
+
+}
+
+#btn span {
+
+    background: white;
+    height: 2px;
+    width: 100%;
+    transform-origin: right center;
+
+}
+
+
+#btn span:nth-child(1),
+#btn span:nth-child(3) {
+    transform: scale(0.8);
+}
+
+#btn span:nth-child(2) {
+    transform: scale(1.2);
+}
+
+#btn:hover span {
+    transform: scale(1);
+    transition: 0.2s linear;
+}
+
+/**************BOTON_ACTIVO*********/
+
+
+.btn-click #btn {
+    position: relative;
+    width: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none;
+
+}
+
+.btn-click #btn span:nth-child(1) {
+    transform: translateY(3px) rotate(-45deg);
+    transform-origin: center center;
+    background: black;
+}
+
+
+.btn-click #btn span:nth-child(2) {
+    display: none;
+}
+
+
+.btn-click #btn span:nth-child(3) {
+    transform: rotate(45deg);
+    transform-origin: center center;
+    background: black;
+}
+    
+/***********************************************/
+
+    #proyectos {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+    }
+
+
+    #proyectos li {
+        border-right: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+
+    #proyectos li {
+        flex: 0 1 25%;
+        width: 25%;
+        min-height: 33.3vh;
+    }
+
+    #proyectos a {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 32vh;
+
+    }
+
+
+    #proyectos li:nth-child(4n+4) {
+        border-right: none;
+    }
+
+
+
+
+}
