@@ -14,7 +14,7 @@ body {
 }
 
 #container{
-    margin-top: 10%;
+    margin-top: 2%;
 }
 
 li {
@@ -36,10 +36,10 @@ h6 {
 
 
 #galeria-responsive {
-    width: 100%;
+    max-width: min(90%, 1600px);
     position: absolute;
     top: 40%;
-    border: 2px solid red;
+    
 }
 
 #galeria-responsive img {
