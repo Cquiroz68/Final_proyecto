@@ -32,7 +32,7 @@ header{
     height: 100vh;
     margin: auto;
     padding: 40px;
-    padding-top: 80px;
+    /* padding-top: 80px; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -53,12 +53,12 @@ header{
     
 }
 
- .menu nav ul{
+.menu nav ul{
     position: absolute;
     top: 10%;
     display: flex;
-   
-    z-index: 2000;
+    z-index: 3;
+    background: #000;
 }
 
 .menu nav ul li{
@@ -212,7 +212,7 @@ main{
 
 .media__cover{
     max-width: min(100%, 1600px);
-    height: 100vh;
+    height: auto;
     position: absolute;
     top: 0;
     left: 0;
@@ -344,7 +344,7 @@ main{
     background-color: var(--raya);
   }
 
-
+/***********************RESPONSIVE*******************/
 
 @media (max-width: 2048px){
 
@@ -409,7 +409,7 @@ main{
     }
 }
 
-@media (max-width: 700px) and (min-width: 1023){
+@media (max-width: 900px){
     .text__information-cover{
         width: 100%;
     }
