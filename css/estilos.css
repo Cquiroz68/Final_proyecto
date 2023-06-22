@@ -114,12 +114,14 @@ main{
     padding: 40px;
     margin: auto;
     
+    
 }
 
 .cover{
     display: flex;
     justify-content: center;
     margin-top: 60px;
+    border: 2px solid blue;
 }
 
 .text__information-cover{
@@ -127,11 +129,11 @@ main{
 }
 
 .text__information-cover h1{
-    font-size: 50px;
+    font-size: clamp(0.7em, 3vw, 2.5em);
 }
 
 .text__information-cover p{
-    font-size: 18px;
+    font-size: clamp(0.7em, 2.5vw, 2em);
     margin-top: 40px;
 }
 
@@ -145,7 +147,7 @@ main{
     border: none;
     color: black;
     font-weight: 500;
-    font-size: 16px;
+    font-size: clamp(0.7em, 2.5vw, 2em);
     cursor: pointer;
     margin-left: 10px;
     transition: background 300ms;
@@ -157,6 +159,7 @@ main{
 
 .media__cover{
     width: 50%;
+    border: 2px solid red;
 }
 
 .media__cover video{
@@ -203,7 +206,7 @@ main{
 
 .banner__text h2{
     color: #fff;
-    font-size: 32px;
+    font-size: clamp(0.7em, 2.5vw, 2em);
     font-weight: 400;
 }
 
@@ -212,7 +215,7 @@ main{
     display: block;
     margin-top: 20px;
     color: white;
-    font-size: 16px;
+    font-size: clamp(0.7em, 2.5vw, 2em);
     font-weight: bold;
     transition: color 300ms;
 }
