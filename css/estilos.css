@@ -371,7 +371,7 @@ main{
     }
 }
 
-@media (max-width: 920px){
+@media (max-width: 1023px){
     .text__information-cover{
         width: 100%;
     }
