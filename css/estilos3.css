@@ -1,0 +1,62 @@
+/* IMPORTANDO FUENTES */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500;700&display=swap');
+
+
+/* ESTABLECIENDO ESTILOS BASICOS */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+a{
+  text-decoration: none;
+}
+
+/* ESTILOS A NUESTRO HEADER */
+
+
+.open #bar1{
+  transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+.open #bar2 {
+  opacity: 0;
+}
+
+.open #bar3{
+  transform: rotate(45deg) translate(-6px, -6px);
+}
+
+/* ESTILOS A NUESTRO MENÚ RESPONSIVE */
+.open .mobile-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 20%;
+  left: 40%;
+  height: auto;
+  width: 50%;
+  background: #444c;
+}
+
+.mobile-menu li {
+  margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 720px) {
+  header nav {
+    display: none;
+  }
+
+  #hamburger-icon {
+    display: block;
+  }
+}
