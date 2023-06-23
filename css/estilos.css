@@ -104,19 +104,21 @@ main{
     height: calc(25vh + 800px);
     padding: 40px;
     margin: auto;
-    
-    
+
 }
 
 .cover{
     display: flex;
     justify-content: center;
     margin-top: 60px;
-    
+    position: relative;
+    top: 0;
+    justify-content: space-around;
 }
 
 .text__information-cover{
-    width: 50%;
+    width: 48%;
+    
 }
 
 .text__information-cover h1{
@@ -125,7 +127,7 @@ main{
 }
 
 .text__information-cover p{
-    font-size: clamp(0.7em, 2vw, 1.5em);
+    font-size: clamp(0.7em, 2vw, 1.3em);
     margin-top: 40px;
 }
 
@@ -150,13 +152,12 @@ main{
 }
 
 .media__cover{
-    width: 50%;
-    
+    width: 48%;
 }
 
 .media__cover video{
     width: 100%;
-    margin-top: -40px;
+    height: 100%;
 }
 
 .imagenportada img{
