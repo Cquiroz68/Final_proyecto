@@ -1,4 +1,5 @@
-document.getElementById("icon_menu").addEventListener("click", mostrar_menu);
+const iconMenu = document.getElementById("icon_menu")
+iconMenu.addEventListener("click", mostrar_menu);
 
 function mostrar_menu(){
 
