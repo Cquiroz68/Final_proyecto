@@ -1,6 +1,27 @@
 /* IMPORTANDO FUENTES */
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500;700&display=swap');
 
+:root{
+  --rojo: #E50914;
+--fondo: #141414;
+  --oscuro:#07070A;
+  --azulOscuro:#0A1128;
+  --azulClaro:#006FE6;
+  --blanco:#FEFCFB;
+  --blanco-gris:#F5F5F5;
+  --titulos:'Baloo 2', cursive;
+  --parrafos:'Montserrat', sans-serif;
+
+  --letra: #fff;
+  --fondo: #023877;
+  --fondo1: #0074C7;
+  --botones: #0099E9;
+  --pasar: #2fb4cc;
+  --cardp: #6a6a6a;
+  --raya: #7a7a7a;
+  --seleccion:#c6c4c493;
+  --hover:#69F1A1;
+}
 
 /* ESTABLECIENDO ESTILOS BASICOS */
 *{
