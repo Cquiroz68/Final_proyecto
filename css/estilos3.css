@@ -65,7 +65,7 @@ a{
   left: 40%;
   height: auto;
   width: 50%;
-  background: #444c;
+  background: var(--cardp);
 }
 
 .mobile-menu li {

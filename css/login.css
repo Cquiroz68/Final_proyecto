@@ -19,6 +19,7 @@
     --raya: #7a7a7a;
     --seleccion:#c6c4c493;
     --hover:#69F1A1;
+    --verdelogin:#035f22;
 }
 
 * {
@@ -29,13 +30,13 @@
 
 body {
     
-    color: #0a0a0a;
+    color: var(--oscuro);
 }
 
 .contenedor{
     width: 90%;
     height: auto;
-    background: #F5F5F5;
+    background: var(--blanco-gris);
     margin: auto;
 }
 
@@ -52,8 +53,8 @@ main {
     margin: 25px auto;
     padding: 10px 40px;
     border-radius: 10px;
-    border: 2px solid #035f22;
-    box-shadow: 0 2px 10px #035f22, 0 2px 10px #035f22;
+    border: 2px solid var(--verdelogin);
+    box-shadow: 0 2px 10px var(--verdelogin), 0 2px 10px var(--verdelogin);
 }
 
 /* -------------------------------------------- FORMULARIO ------------------------------------------*/
@@ -75,9 +76,9 @@ main {
 .formulario__input {
     width: 90%;
     background: transparent;
-    border-bottom: 2px solid #035f22;
+    border-bottom: 2px solid var(--verdelogin);
     border-right: none;
-    color: #c2bebe;
+    color: var(--seleccion);
     font-size: 17px;
     outline: none;
     line-height: 45px;
@@ -95,7 +96,7 @@ main {
 }
 
 .formulario__input:focus {
-    box-shadow: 0 0 5px #035f22;
+    box-shadow: 0 0 5px var(--verdelogin);
 }
 
 .formulario__input-error {
@@ -130,11 +131,9 @@ main {
 
 .formulario__mensaje {
     display: none;
-    /* height: 45px; */
-    /* line-height: 45px; */
     padding: 15px;
     border-radius: 5px;
-    background: #f00;
+    background: var(--rojo);
     text-align: center;
 }
 
@@ -150,21 +149,21 @@ main {
 
 .formulario__btn {
     padding: 15px 35px;
-    background: #000;
-    color: #fff;
+    background: var(--oscuro);
+    color: var(--blanco);
     border: none;
     border-radius: 3px;
     cursor: pointer;
 }
 
 .formulario__btn:hover {
-    background: #035f22;
+    background: var(--verdelogin);
     transition: 1s;
 }
 
 .formulario__mensaje-exito {
     font-size: 2em;
-    color: #20b80c;
+    color: var(--hover);
     padding: 10px;
     text-align: center;
     display: none;
@@ -177,22 +176,22 @@ main {
 
 /* --------------------------------------------- VALIDACIÓN ----------------------------------------- */
 .formulario__grupo-correcto .formulario__validacion-estado{
-    color: #29ee0f;
+    color: var(--hover);
     opacity: 1;
 }
 
 .formulario__grupo-incorrecto .formulario__label{
-    color: #ee0f0f;
+    color: var(--rojo);
 }
 
 
 .formulario__grupo-incorrecto .formulario__validacion-estado{
-    color: #ee0f0f;
+    color: var(--rojo);
     opacity: 1;
 }
 
 .formulario__grupo-incorrecto .formulario__input{
-    border: 1px solid #ee0f0f;
+    border: 1px solid var(--rojo);
     
 }
 

@@ -1,0 +1,62 @@
+:root{
+    --rojo: #E50914;
+	--fondo: #141414;
+    --oscuro:#07070A;
+    --azulOscuro:#0A1128;
+    --azulClaro:#006FE6;
+    --blanco:#FEFCFB;
+    --blanco-gris:#F5F5F5;
+    --titulos:'Baloo 2', cursive;
+    --parrafos:'Montserrat', sans-serif;
+
+    --letra: #fff;
+    --fondo: #023877;
+    --fondo1: #0074C7;
+    --botones: #0099E9;
+    --pasar: #2fb4cc;
+    --cardp: #6a6a6a;
+    --raya: #7a7a7a;
+    --seleccion:#c6c4c493;
+    --hover:#69F1A1;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+#valor{
+    max-width: min(100%, 1600px);
+    height: auto;
+    background: var(--blanco-gris);
+    
+}
+
+#valor h1{
+    text-align: center;
+    font-size: clamp(0.7em, 3.5vw, 2.5em);
+}
+
+.valores{
+    max-width: min(100%, 1600px);
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5%;
+}
+
+.valor{
+    max-width: min(33%, 1600px);
+   padding: 1%;
+    border: 2px solid var(--oscuro);
+    background: var(--blanco-gris);
+}
+
+.valor h2{
+    font-size: clamp(0.7em, 2vw, 1.5em);
+    background: var(--oscuro);
+    color: var(--blanco-gris);
+}
+
+

@@ -27,7 +27,7 @@
 }
 
 .contenedor {
-	width: 90%;
+	max-width: min(90%,1600px);
 	margin: auto;
 	
 }
@@ -88,11 +88,13 @@ header nav a.activo {
 }
 
 
+
+
 /* ---- ----- ----- Contenedor Principal y Flechas ----- ----- ----- */
 .joyas-recomendadas {
 	/* margin-bottom: 70px; */
-    margin-top: 10vh;
-	height: 50vh;
+    margin: 10vh 5vh;
+	height:auto;
 	
 }
 
@@ -101,6 +103,7 @@ header nav a.activo {
 	align-items: center;
 	position: relative;
     top: 15vh;
+	
    
 }
 
@@ -136,9 +139,11 @@ header nav a.activo {
 /* ---- ----- ----- Carousel ----- ----- ----- */
 .joyas-recomendadas .contenedor-carousel {
 	width: 100%;
+	height: auto;
 	padding: 20px 0;
 	overflow: hidden;
 	scroll-behavior: smooth;
+	
 }
 
 .joyas-recomendadas .contenedor-carousel .carousel {
