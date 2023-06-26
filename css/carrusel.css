@@ -1,0 +1,200 @@
+:root{
+    --rojo: #E50914;
+	--fondo: #141414;
+    --oscuro:#07070A;
+    --azulOscuro:#0A1128;
+    --azulClaro:#006FE6;
+    --blanco:#FEFCFB;
+    --blanco-gris:#F5F5F5;
+    --titulos:'Baloo 2', cursive;
+    --parrafos:'Montserrat', sans-serif;
+
+    --letra: #fff;
+    --fondo: #023877;
+    --fondo1: #0074C7;
+    --botones: #0099E9;
+    --pasar: #2fb4cc;
+    --cardp: #6a6a6a;
+    --raya: #7a7a7a;
+    --seleccion:#c6c4c493;
+    --hover:#69F1A1;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.contenedor {
+	width: 90%;
+	margin: auto;
+	
+}
+
+header {
+	padding: 30px 0;
+}
+
+header .contenedor {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header .logotipo {
+	font-family: 'Bebas Neue', cursive;
+	font-weight: normal;
+	color: var(--rojo);
+	font-size: clamp(0.7em, 2vw, 1.3em);
+}
+
+header nav a {
+	color: var(--seleccion);
+	text-decoration: none;
+	margin-right: 20px;
+}
+
+header nav a:hover,
+header nav a.activo {
+	color: var(--blanco);
+}
+
+/* ---- ----- ----- Contenedor Titulo y Controles ----- ----- ----- */
+.contenedor-titulo-controles {
+	display: flex;
+	justify-content: space-between;
+	align-items: end;
+    
+}
+
+.contenedor-titulo-controles h3 {
+	color: var(--oscuro);
+	font-size: clamp(0.7em, 2vw, 1.2em);
+}
+
+.contenedor-titulo-controles .indicadores button {
+	background: var(--blanco);
+	height: 3px;
+	width: 10px;
+	cursor: pointer;
+	border: none;
+	margin-right: 2px;
+}
+
+.contenedor-titulo-controles .indicadores button:hover,
+.contenedor-titulo-controles .indicadores button.activo {
+	background: var(--rojo);
+}
+
+
+/* ---- ----- ----- Contenedor Principal y Flechas ----- ----- ----- */
+.joyas-recomendadas {
+	/* margin-bottom: 70px; */
+    margin-top: 10vh;
+	height: 50vh;
+	
+}
+
+.joyas-recomendadas .contenedor-principal {
+	display: flex;
+	align-items: center;
+	position: relative;
+    top: 15vh;
+   
+}
+
+.joyas-recomendadas .contenedor-principal .flecha-izquierda,
+.joyas-recomendadas .contenedor-principal .flecha-derecha {
+	position: absolute;
+	border: none;
+	background: rgba(0,0,0,0.3);
+	font-size: clamp(0.7em, 2vw, 1.2em);
+	height: 50%;
+	top: calc(50% - 25%);
+	line-height: 40px;
+	width: 50px;
+	color: var(--blanco);
+	cursor: pointer;
+	z-index: 500;
+	transition: .2s ease all;
+}
+
+.joyas-recomendadas .contenedor-principal .flecha-izquierda:hover,
+.joyas-recomendadas .contenedor-principal .flecha-derecha:hover {
+	background: rgba(0,0,0, .9);
+}
+
+.joyas-recomendadas .contenedor-principal .flecha-izquierda {
+	left: 0;
+}
+
+.joyas-recomendadas .contenedor-principal .flecha-derecha {
+	right: 0;
+}
+
+/* ---- ----- ----- Carousel ----- ----- ----- */
+.joyas-recomendadas .contenedor-carousel {
+	width: 100%;
+	padding: 20px 0;
+	overflow: hidden;
+	scroll-behavior: smooth;
+}
+
+.joyas-recomendadas .contenedor-carousel .carousel {
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.joyas-recomendadas .contenedor-carousel .carousel .joya {
+	min-width: 20%;
+	transition: .3s ease all;
+	box-shadow: 5px 5px 10px rgba(0,0,0, .3);
+}
+
+.joyas-recomendadas .contenedor-carousel .carousel .joya.hover {
+	transform: scale(1.2);
+	transform-origin: center;
+}
+
+.joyas-recomendadas .contenedor-carousel .carousel .joya img {
+	width: 100%;
+	vertical-align: top;
+}
+
+/* ---- ----- ----- Media Queries ----- ----- ----- */
+@media screen and (max-width: 800px) {
+	header .logotipo {
+		margin-bottom: 10px;
+		font-size: clamp(0.7em, 2vw, 1.2em);
+	}
+
+	header .contenedor {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.joya-principal {
+		font-size: clamp(0.7em, 2vw, 1.2em);
+	}
+
+	.joya-principal .descripcion {
+		max-width: 100%;
+	}
+
+	.joyas-recomendadas .contenedor-carousel {
+		overflow: visible;
+	}
+
+	.joyas-recomendadas .contenedor-carousel .carousel {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 20px;
+	}
+
+	.joyas-recomendadas .indicadores,
+	.joyas-recomendadas .flecha-izquierda,
+	.joyas-recomendadas .flecha-derecha {
+		display: none;
+	}
+}
