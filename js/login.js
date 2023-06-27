@@ -22,20 +22,15 @@ const campos = {
     telefono: false,
 };
 
-let vUsuario;
-let vNombre;
-let vPass;
-let vCorreo;
-let vTelefono;
+let usuarioRegistrado =[];
+
 
 // --------- SWITCH PARA SELECCIONAR EL INPUT DONDE ÉSTE HACIENDO FOCO EL USUARIO  ---------------
 const validarFormulario = (e) => {
     switch(e.target.name) {
         case "usuario":
             validarCampo(expresiones.usuario, e.target, "usuario");
-            vUsuario= e.target;
-            console.log(e.target);
-    
+
         break;
         case "nombre":
             validarCampo(expresiones.nombre, e.target, "nombre");
@@ -66,7 +61,7 @@ const validarCampo = (expresion, input, campo) => {
         document.querySelector(`#grupo__${campo} i`).classList.add("fa-check-circle");
         document.querySelector(`#grupo__${campo} .formulario__input-error`).classList.remove("formulario__input-error-activo");
         campos[campo] = true;
-        console.log("Funciona");
+
     } else {
            document.getElementById(`grupo__${campo}`).classList.add("formulario__grupo-incorrecto");
            document.getElementById(`grupo__${campo}`).classList.remove("formulario__grupo-correcto");
@@ -74,7 +69,7 @@ const validarCampo = (expresion, input, campo) => {
            document.querySelector(`#grupo__${campo} i`).classList.remove("fa-check-circle");
            document.querySelector(`#grupo__${campo} .formulario__input-error`).classList.add("formulario__input-error-activo");
            campos[campo] = false;
-           console.log("Funciona");
+          
         }
 }
 
@@ -91,7 +86,7 @@ const validarPassword2 = () => {
         document.querySelector(`#grupo__password2 i`).classList.remove("fa-check-circle");
         document.querySelector(`#grupo__password2 .formulario__input-error`).classList.add("formulario__input-error-activo");
         campos[password] = false;
-        console.log("Funciona");
+      
     } else {
         document.getElementById(`grupo__password2`).classList.remove("formulario__grupo-incorrecto");
         document.getElementById(`grupo__password2`).classList.add("formulario__grupo-correcto");
@@ -99,7 +94,7 @@ const validarPassword2 = () => {
         document.querySelector(`#grupo__password2 i`).classList.add("fa-check-circle");
         document.querySelector(`#grupo__password2 .formulario__input-error`).classList.remove("formulario__input-error-activo");
         campos[password] = true;
-        console.log("Funciona");
+       
     }
 }
 
@@ -118,35 +113,39 @@ $formulario.addEventListener("submit", (e) => {
 
     const $terminos = document.getElementById("terminos");
     if(campos.usuario && campos.nombre && campos.password && campos.correo && campos.telefono && $terminos.checked) {
-        // formulario.reset();
-
-        console.log(campos.usuario);
+        
+        
         document.getElementById("formulario__mensaje-exito").classList.add("formulario__mensaje-exito-activo");
-        setTimeout(() => {
-            document.getElementById("formulario__mensaje-exito").classList.remove("formulario__mensaje-exito-activo");
-            document.getElementById("formulario__grupo-terminos").style.display = "none";
-          
-            
-        }, 3000);
-        
-        // document.querySelectorAll(".formulario__grupo--correcto").forEach ((icono) => {
-        //     icono.classList.remove("formulario__grupo--correcto");
-        // });
-        
-        // setTimeout(() => {
-        //     location.reload();
-        // }, 5000);
-
-        let usuarioRegistrado=[];
-        usuarioRegistrado.push({
-            usuario: vUsuario, 
-            // nombre: campos.password.value , 
-            // correo: campos.correo.value, 
-            // telefono: campos.telefono.value, 
-        });
-        localStorage.setItem("Usuarios", JSON.stringify(campos));
-
-    } else {
-        document.getElementById("formulario__mensaje").classList.add("formulario__mensaje-activo");
     }
+        
+        $formulario.reset();
+
+        document.getElementById("formulario__mensaje-exito").classList.remove("formulario__mensaje-exito-activo");
+        
+        let validar = document.querySelectorAll(".formulario__validacion-estado");
+        for(let i = 0; i<validar.length; i++){
+            validar[i].style.opacity = 0;
+        }
+        
+        
+});
+
+const enviarBtn = document.querySelector(".formulario__btn");
+
+enviarBtn.addEventListener("click", ()=>{
+
+
+    let usuario = document.querySelector('#usuario').value;
+    let nombre = document.querySelector('#nombre').value;
+    let correo = document.querySelector('#correo').value;
+    let telefono = document.querySelector('#telefono').value;
+
+    usuarioRegistrado.push({
+        usuario: usuario,
+        nombre: nombre,
+        correo: correo,
+        telefono: telefono, 
+       
+    });
+    localStorage.setItem("Usuarios", JSON.stringify(usuarioRegistrado));
 });
