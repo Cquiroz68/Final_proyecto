@@ -1,6 +1,6 @@
 // --------- GUARDAMOS NUESTRO FORMULARIO E INPUTS EN CONSTANTES ---------------
 const $formulario = document.getElementById("formulario");
-const $inputs = document.querySelectorAll("#formulario input")
+const $inputs = document.querySelectorAll("#formulario input");
 
 
 // --------- OBJETO CON NUESTRAS EXPRESIONES REGULARES ---------------
@@ -19,15 +19,23 @@ const campos = {
     nombre: false,
     password: false,
     correo: false,
-    telefono: false
-}
+    telefono: false,
+};
 
+let vUsuario;
+let vNombre;
+let vPass;
+let vCorreo;
+let vTelefono;
 
 // --------- SWITCH PARA SELECCIONAR EL INPUT DONDE ÉSTE HACIENDO FOCO EL USUARIO  ---------------
 const validarFormulario = (e) => {
     switch(e.target.name) {
         case "usuario":
             validarCampo(expresiones.usuario, e.target, "usuario");
+            vUsuario= e.target;
+            console.log(e.target);
+    
         break;
         case "nombre":
             validarCampo(expresiones.nombre, e.target, "nombre");
@@ -112,20 +120,31 @@ $formulario.addEventListener("submit", (e) => {
     if(campos.usuario && campos.nombre && campos.password && campos.correo && campos.telefono && $terminos.checked) {
         // formulario.reset();
 
+        console.log(campos.usuario);
         document.getElementById("formulario__mensaje-exito").classList.add("formulario__mensaje-exito-activo");
         setTimeout(() => {
             document.getElementById("formulario__mensaje-exito").classList.remove("formulario__mensaje-exito-activo");
             document.getElementById("formulario__grupo-terminos").style.display = "none";
+          
             
         }, 3000);
         
-        document.querySelectorAll(".formulario__grupo--correcto").forEach ((icono) => {
-            icono.classList.remove("formulario__grupo--correcto");
-        });
+        // document.querySelectorAll(".formulario__grupo--correcto").forEach ((icono) => {
+        //     icono.classList.remove("formulario__grupo--correcto");
+        // });
         
-        setTimeout(() => {
-            location.reload();
-        }, 5000);
+        // setTimeout(() => {
+        //     location.reload();
+        // }, 5000);
+
+        let usuarioRegistrado=[];
+        usuarioRegistrado.push({
+            usuario: vUsuario, 
+            // nombre: campos.password.value , 
+            // correo: campos.correo.value, 
+            // telefono: campos.telefono.value, 
+        });
+        localStorage.setItem("Usuarios", JSON.stringify(campos));
 
     } else {
         document.getElementById("formulario__mensaje").classList.add("formulario__mensaje-activo");

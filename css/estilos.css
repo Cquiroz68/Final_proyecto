@@ -40,6 +40,12 @@ body{
     margin: auto;
 }
 
+#fecha-hora{
+    max-width: min(100%, 1600px);
+    font-size: clamp(0.7em, 1.5vw, 1em);
+    color: var(--rojo);
+}
+
 header{
    max-width: min(100%, 1600px);
   display: flex;
